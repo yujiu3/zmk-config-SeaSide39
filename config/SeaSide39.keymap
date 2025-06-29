@@ -47,7 +47,7 @@
             bindings = <
 &mt ESCAPE Q      &kp W      &kp E         &kp R             &kp T                                                       &kp Y        &kp U  &lt 5 I    &kp O       &lt 6 P
 &kp A             &kp S      &kp D         &kp F             &kp G                                                       &kp H        &kp J  &kp K      &kp L       &kp MINUS
-&mt LEFT_SHIFT Z  &kp X      &kp C         &kp V             &kp B                                                       &kp N        &kp M  &kp COMMA  &kp PERIOD  &kp BACKSLASH
+&mt LEFT_SHIFT Z  &kp X      &kp C         &kp V             &kp B                                                       &kp N        &kp M  &kp COMMA  &kp PERIOD  &kp 0x89
 &kp LEFT_SHIFT    &kp LCTRL  &kp LEFT_ALT  &mt LEFT_WIN TAB  &lt 1 SPACE  &lt 2 CAPSLOCK      &mt RIGHT_SHIFT BACKSPACE  &lt 3 ENTER                                &lt 5 ESCAPE
             >;
 
@@ -56,9 +56,9 @@
 
         SYMBOL {
             bindings = <
-&kp PRCNT  &kp DOLLAR  &kp AMPERSAND  &kp CARET        &kp FSLH                             &kp BSLH        &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LESS_THAN  &kp GREATER_THAN
-&kp AT     &kp HASH    &kp ASTERISK   &kp PLUS         &kp EQUAL                            &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMI       &kp COLON
-&kp GRAVE  &kp TILDE   &kp MINUS      &kp EXCLAMATION  &kp QUESTION                         &kp PIPE        &kp LBKT              &kp RBKT               &kp SQT        &kp DOUBLE_QUOTES
+&kp PRCNT  &kp DOLLAR  &kp CARET      &kp UNDER        &kp FSLH                             &kp 0x89        &kp RIGHT_BRACE       &kp PIPE               &kp LESS_THAN  &kp GREATER_THAN
+&kp LEFT_BRACKET  &kp HASH    &kp DOUBLE_QUOTES  &kp COLON  &kp UNDER                       &kp LS(0x87)    &kp ASTERISK          &kp LEFT_PARENTHESIS   &kp SEMI       &kp SINGLE_QUOTE
+&kp LEFT_BRACE &kp PLUS   &kp MINUS      &kp EXCLAMATION  &kp QUESTION                         &kp LS(0x89)       &kp RIGHT_BRACKET   &kp BACKSLASH        &kp AMPERSAND  &kp AT
 &trans     &trans      &trans         &trans           &trans        &trans      &kp COMMA  &kp PERIOD                                                                  &kp ESC
             >;
         };

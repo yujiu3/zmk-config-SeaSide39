@@ -7,6 +7,31 @@
 #define SCROLL 5
 #define NUM 6
 
+// OS設定を日本語キーボードのまま使用するための変換定義
+#define JP_DQUOTE       AT                // "
+#define JP_AMPERSAND    CARET             // &
+#define JP_QUOTE        AMPERSAND         // '
+#define JP_EQUAL        UNDER             // =
+#define JP_CARET        EQUAL             // ^
+#define JP_YEN          0x89              // ¥
+#define JP_PLUS         COLON             // +
+#define JP_TILDE        PLUS              // ~
+#define JP_PIPE         LS(0x89)          // |
+#define JP_AT           LEFT_BRACKET      // @
+#define JP_COLON        SINGLE_QUOTE      // :
+#define JP_ASTERISK     DOUBLE_QUOTES     // *
+#define JP_BACKQUOTE    LEFT_BRACE        // `
+#define JP_UNDERSCORE   LS(0x87)          // _
+#define JP_LBRACKET     RIGHT_BRACKET     // [
+#define JP_RBRACKET     BACKSLASH         // ]
+#define JP_LPAREN       ASTERISK          // (
+#define JP_RPAREN       LEFT_PARENTHESIS  // )
+#define JP_LBRACE       RIGHT_BRACE       // {
+#define JP_RBRACE       PIPE              // }
+#define JP_KANA         LANGUAGE_1        // かな
+#define JP_EISU         LANGUAGE_2        // 英数
+#define JP_HANZEN       GRAVE             // 半角/全角
+
 &mt {
     flavor = "balanced";
     quick-tap-ms = <300>;
@@ -45,10 +70,10 @@
 
         default_layer {
             bindings = <
-&mt ESCAPE Q      &kp W      &kp E         &kp R             &kp T                                                       &kp Y        &kp U  &lt 5 I    &kp O       &lt 6 P
-&kp A             &kp S      &kp D         &kp F             &kp G                                                       &kp H        &kp J  &kp K      &kp L       &kp MINUS
-&mt LEFT_SHIFT Z  &kp X      &kp C         &kp V             &kp B                                                       &kp N        &kp M  &kp COMMA  &kp PERIOD  &kp 0x89
-&kp LEFT_SHIFT    &kp LCTRL  &kp LEFT_ALT  &mt LEFT_WIN TAB  &lt 1 SPACE  &lt 2 CAPSLOCK      &mt RIGHT_SHIFT BACKSPACE  &lt 3 ENTER                                &lt 5 ESCAPE
+&mt ESCAPE Q      &kp W             &kp E         &kp R           &lt 6 T                                      &kp Y            &kp U            &lt 5 I       &kp O              &lt 6 P
+&kp A             &mt LEFT_SHIFT S  &mt LCTRL D   &mt LEFT_ALT F  &kp G                                        &kp H            &mt RIGHT_ALT J  &mt RCTRL K   &mt RIGHT_SHIFT L  &kp MINUS
+&mt LEFT_SHIFT Z  &kp X             &kp C         &kp V           &kp B                                        &kp N            &kp M            &kp COMMA     &kp PERIOD         &kp JP_YEN
+&kp LCTRL         &mt LEFT_WIN TAB  &kp LEFT_ALT  &kp LANG1       &lt 4 SPACE  &lt 2 LANG2      &mt BACKSPACE  &lt 1 ENTER                                                        &mt ESCAPE JP_TILDE
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -56,19 +81,19 @@
 
         SYMBOL {
             bindings = <
-&kp PRCNT  &kp DOLLAR  &kp CARET      &kp UNDER        &kp FSLH                             &kp 0x89        &kp RIGHT_BRACE       &kp PIPE               &kp LESS_THAN  &kp GREATER_THAN
-&kp LEFT_BRACKET  &kp HASH    &kp DOUBLE_QUOTES  &kp COLON  &kp UNDER                       &kp LS(0x87)    &kp ASTERISK          &kp LEFT_PARENTHESIS   &kp SEMI       &kp SINGLE_QUOTE
-&kp LEFT_BRACE &kp PLUS   &kp MINUS      &kp EXCLAMATION  &kp QUESTION                         &kp LS(0x89)       &kp RIGHT_BRACKET   &kp BACKSLASH        &kp AMPERSAND  &kp AT
+&kp PRCNT  &kp DOLLAR  &kp AMPERSAND  &kp CARET        &kp FSLH                             &kp BSLH        &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LESS_THAN  &kp GREATER_THAN
+&kp AT     &kp HASH    &kp ASTERISK   &kp PLUS         &kp EQUAL                            &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMI       &kp COLON
+&kp GRAVE  &kp TILDE   &kp MINUS      &kp EXCLAMATION  &kp QUESTION                         &kp PIPE        &kp LBKT              &kp RBKT               &kp SQT        &kp DOUBLE_QUOTES
 &trans     &trans      &trans         &trans           &trans        &trans      &kp COMMA  &kp PERIOD                                                                  &kp ESC
             >;
         };
 
         NUM {
             bindings = <
-&trans  &kp F9  &kp F10  &kp F11  &kp F12                            &kp N7        &kp NUMBER_8  &kp NUMBER_9  &kp PLUS      &kp MINUS
-&trans  &kp F5  &kp F6   &kp F7   &kp F8                             &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK  &kp SLASH
-&trans  &kp F1  &kp F2   &kp F3   &mt LA(F4) F4                      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp COMMA     &kp PERIOD
-&trans  &trans  &trans   &trans   &trans         &trans      &trans  &kp NUMBER_0                                            &kp EQUAL
+&trans  &kp F9  &kp F10  &kp F11  &kp F12                      &kp N7        &kp NUMBER_8  &kp NUMBER_9  &kp PLUS         &kp MINUS
+&trans  &kp F5  &kp F6   &kp F7   &kp F8                       &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK     &kp SLASH
+&trans  &kp F1  &kp F2   &kp F3   &kp F4                       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp RIGHT_BRACE  &kp COLON
+&trans  &trans  &trans   &trans   &trans   &trans      &trans  &kp NUMBER_0                                               &kp PERIOD
             >;
         };
 
@@ -77,7 +102,7 @@
 &kp ESCAPE      &mkp MB4                &kp UP_ARROW    &mkp MB5                 &trans                       &kp LG(LEFT_ARROW)          &kp LA(LEFT_ARROW)      &kp UP_ARROW    &kp RA(RIGHT_ARROW)      &kp RG(RIGHT_ARROW)
 &kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END                      &kp LC(LS(TAB))             &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp RC(TAB)
 &kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans                       &kp LA(LG(LC(LEFT_ARROW)))  &kp LA(LG(LEFT_ARROW))  &kp LA(LG(F))   &kp RG(RA(RIGHT_ARROW))  &kp RA(RC(RG(RIGHT_ARROW)))
-&trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                                                                                       &trans
+&trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &kp BACKSPACE                                                                                &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
@@ -94,18 +119,18 @@
 
         SCROLL {
             bindings = <
-&trans     &trans     &kp ENTER  &trans  &trans                                            &trans            &trans  &trans  &trans  &trans
-&trans     &trans     &trans     &trans  &trans                                            &trans            &trans  &trans  &trans  &trans
-&trans     &trans     &trans     &trans  &trans                                            &trans            &trans  &trans  &trans  &trans
-&kp LCTRL  &kp LCTRL  &trans     &trans  &kp LS(LG(N5))  &kp LS(LG(N4))      &kp LC(DOWN)  &kp LC(UP_ARROW)                          &trans
+&trans  &trans  &kp ENTER  &trans  &trans                                            &trans            &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans  &trans                                            &trans            &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans  &trans                                            &trans            &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans  &kp LS(LG(N5))  &kp LS(LG(N4))      &kp LC(DOWN)  &kp LC(UP_ARROW)                          &trans
             >;
         };
 
         CONFIG {
             bindings = <
-&bt BT_CLR_ALL  &bt BT_CLR    &trans        &trans        &trans                            &trans       &trans  &trans  &trans  &trans
-&trans          &trans        &trans        &trans        &trans                            &trans       &trans  &trans  &trans  &trans
-&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                      &bootloader  &trans  &trans  &trans  &trans
+&bt BT_CLR_ALL  &bt BT_CLR    &trans        &bootloader   &trans                            &trans  &trans  &trans  &trans  &bootloader
+&trans          &trans        &trans        &trans        &trans                            &trans  &trans  &trans  &trans  &trans
+&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                      &trans  &trans  &trans  &trans  &trans
 &trans          &trans        &trans        &trans        &trans        &trans      &trans  &trans                               &trans
             >;
         };

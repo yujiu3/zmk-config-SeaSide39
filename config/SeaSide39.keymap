@@ -73,7 +73,7 @@
 &mt ESCAPE Q      &kp W             &kp E         &kp R           &lt 6 T                                      &kp Y            &kp U            &lt 5 I       &kp O              &lt 6 P
 &kp A             &mt LEFT_SHIFT S  &mt LCTRL D   &mt LEFT_ALT F  &kp G                                        &kp H            &mt RIGHT_ALT J  &mt RCTRL K   &mt RIGHT_SHIFT L  &kp MINUS
 &mt LEFT_SHIFT Z  &kp X             &kp C         &kp V           &kp B                                        &kp N            &kp M            &kp COMMA     &kp PERIOD         &kp JP_YEN
-&kp LCTRL         &mt LEFT_WIN TAB  &kp LEFT_ALT  &kp LANG1       &lt 4 SPACE  &lt 2 LANG2      &mt BACKSPACE  &lt 1 ENTER                                                        &mt ESCAPE JP_TILDE
+&kp LCTRL         &mt LEFT_WIN TAB  &kp LEFT_ALT  &kp LANG1       &lt 4 SPACE  &lt 2 LANG2      &kp BACKSPACE  &lt 1 ENTER                                                        &mt ESCAPE JP_TILDE
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;

@@ -122,7 +122,7 @@
 &trans     &trans     &kp ENTER  &trans  &trans                                            &trans            &trans  &trans  &trans  &trans
 &trans     &trans     &trans     &trans  &trans                                            &trans            &trans  &trans  &trans  &kp LCTRL
 &trans     &trans     &trans     &trans  &trans                                            &trans            &trans  &trans  &trans  &trans
-&kp LCTRL  &kp LCTRL  &trans     &trans  &kp LS(LG(N5))  &kp LS(LG(N4))      &kp LC(DOWN)  &kp LC(UP_ARROW)                          &trans
+&trans     &trans     &trans     &trans  &kp LS(LG(N5))  &kp LS(LG(N4))      &kp LC(DOWN)  &kp LC(UP_ARROW)                          &trans
             >;
         };
 

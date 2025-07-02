@@ -81,10 +81,10 @@
 
         SYMBOL {
             bindings = <
-&kp F1                   &kp F2        &kp F3        &kp LA(F4)       &kp F5                                       &kp F6             &kp F7            &kp F8           &kp F9         &kp F10
-&kp EXCLAMATION          &kp JP_AT     &kp HASH      &kp DOLLAR       &kp PERCENT                                  &kp JP_CARET       &kp JP_AMPERSAND  &kp JP_ASTERISK  &kp JP_LPAREN  &kp JP_RPAREN
-&mt LEFT_SHIFT kp LC(Z)  &kp LC(X)     &kp LC(C)     &kp LC(V)        &kp LC(B)                                    &kp JP_UNDERSCORE  &kp MINUS         &kp JP_PLUS      &kp SEMICOLON  &kp JP_QUOTE
-&kp LCTRL                &kp LEFT_WIN  &kp LEFT_ALT  &kp LC(PAGE_UP)  &kp LC(HOME)  &kp LC(PAGE_DOWN)      &trans  &trans                                                               &kp JP_PIPE
+&kp F1                   &kp F2        &kp F3        &kp LA(F4)       &kp F5                                               &kp F6             &kp F7            &kp F8           &kp F9         &kp F10
+&kp EXCLAMATION          &kp JP_AT     &kp HASH      &kp DOLLAR       &kp PERCENT                                          &kp JP_CARET       &kp JP_AMPERSAND  &kp JP_ASTERISK  &kp JP_LPAREN  &kp JP_RPAREN
+&mt LEFT_SHIFT kp LC(Z)  &kp LC(X)     &kp LC(C)     &kp LC(V)        &kp LC(B)                                            &kp JP_UNDERSCORE  &kp MINUS         &kp JP_PLUS      &kp SEMICOLON  &kp JP_QUOTE
+&kp LCTRL                &kp LEFT_WIN  &kp LEFT_ALT  &kp LC(PAGE_UP)  &mt LC(END) LC(HOME)  &kp LC(PAGE_DOWN)      &trans  &trans                                                               &kp JP_PIPE
             >;
         };
 

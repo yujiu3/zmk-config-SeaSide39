@@ -70,10 +70,10 @@
 
         default_layer {
             bindings = <
-&mt ESCAPE Q      &kp W             &lt 5 E       &kp R           &lt 6 T                                      &kp Y            &kp U            &lt 5 I       &kp O              &lt 6 P
-&kp A             &mt LEFT_SHIFT S  &mt LCTRL D   &mt LEFT_ALT F  &kp G                                        &kp H            &mt RIGHT_ALT J  &mt RCTRL K   &mt RIGHT_SHIFT L  &kp MINUS
-&mt LEFT_SHIFT Z  &kp X             &kp C         &kp V           &kp B                                        &kp N            &kp M            &kp COMMA     &kp PERIOD         &kp JP_YEN
-&kp LCTRL         &mt LEFT_WIN TAB  &kp LEFT_ALT  &kp LANG1       &lt 4 SPACE  &lt 2 LANG2      &kp BACKSPACE  &lt 1 ENTER                                                        &mt ESCAPE JP_TILDE
+&mt ESCAPE Q      &kp W             &lt 5 E       &kp R               &lt 6 T                                      &kp Y            &kp U            &lt 5 I       &kp O              &lt 6 P
+&kp A             &mt LEFT_SHIFT S  &mt LCTRL D   &mt LEFT_ALT F      &kp G                                        &kp H            &mt RIGHT_ALT J  &mt RCTRL K   &mt RIGHT_SHIFT L  &kp MINUS
+&mt LEFT_SHIFT Z  &kp X             &kp C         &kp V               &kp B                                        &kp N            &kp M            &kp COMMA     &kp PERIOD         &kp JP_YEN
+&kp LCTRL         &mt LEFT_WIN TAB  &kp LEFT_ALT  &mt LEFT_ALT LANG1  &lt 4 SPACE  &lt 2 LANG2      &kp BACKSPACE  &lt 1 ENTER                                                        &mt ESCAPE JP_TILDE
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -110,10 +110,10 @@
 
         MOUSE {
             bindings = <
-&mt ESCAPE Q      &kp W             &lt 5 E       &kp R           &lt 6 T                                  &kp Y       &kp U           &lt 5 I         &kp O            &lt 6 P
-&kp A             &mt LEFT_SHIFT S  &mt LCTRL D   &mt LEFT_ALT F  &kp G                                    &kp H       &mkp MB1        &kp UP_ARROW    &mkp MB2         &kp MINUS
-&mt LEFT_SHIFT Z  &kp X             &kp C         &kp V           &kp B                                    &kp N       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp JP_YEN
-&kp LCTRL         &mt LEFT_WIN TAB  &kp LEFT_ALT  &kp LANG1       &trans   &lt 2 LANG2      &kp BACKSPACE  &lt 1 ENTER                                                  &mt ESCAPE JP_TILDE
+&mt ESCAPE Q      &kp W             &lt 5 E       &kp R               &lt 6 T                                  &kp Y       &kp U           &lt 5 I         &kp O            &lt 6 P
+&kp A             &mt LEFT_SHIFT S  &mt LCTRL D   &mt LEFT_ALT F      &kp G                                    &kp H       &mkp MB1        &kp UP_ARROW    &mkp MB2         &kp MINUS
+&mt LEFT_SHIFT Z  &kp X             &kp C         &kp V               &kp B                                    &kp N       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp JP_YEN
+&kp LCTRL         &mt LEFT_WIN TAB  &kp LEFT_ALT  &mt LEFT_ALT LANG1  &trans   &lt 2 LANG2      &kp BACKSPACE  &lt 1 ENTER                                                  &mt ESCAPE JP_TILDE
             >;
         };
 
@@ -122,7 +122,7 @@
 &trans     &trans              &trans              &trans               &trans                                     &trans            &trans          &trans          &trans           &trans
 &trans     &trans              &kp LG(UP_ARROW)    &trans               &trans                                     &trans            &trans          &kp UP_ARROW    &trans           &trans
 &trans     &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)  &trans                                     &trans            &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LCTRL
-&kp LCTRL  &kp LCTRL           &trans              &kp LG(LS(S))        &kp LG(D)  &LC(LA(DEL))   &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)                                                  &trans
+&kp LCTRL  &kp LCTRL           &trans              &kp LS(LG(S))        &kp LG(D)  &LA(LC(DEL))   &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)                                                  &trans
             >;
         };
 

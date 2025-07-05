@@ -111,8 +111,8 @@
         MOUSE {
             bindings = <
 &mt ESCAPE Q      &kp W             &lt 5 E       &kp R               &lt 6 T                                  &kp Y       &kp U     &lt 5 I    &kp O       &kp DELETE
-&kp A             &mt LEFT_SHIFT S  &mt LCTRL D   &mt LEFT_ALT F      &kp G                                    &kp H       &mkp MB1  &kp k      &mkp MB2    &kp MINUS
-&mt LEFT_SHIFT Z  &kp X             &kp C         &kp V               &kp B                                    &kp N       &kp m     &kp COMMA  &kp PERIOD  &kp JP_YEN
+&kp A             &mt LEFT_SHIFT S  &mt LCTRL D   &mt LEFT_ALT F      &kp G                                    &kp H       &mkp MB1  &kp K      &mkp MB2    &kp MINUS
+&mt LEFT_SHIFT Z  &kp X             &kp C         &kp V               &kp B                                    &kp N       &kp M     &kp COMMA  &kp PERIOD  &kp JP_YEN
 &kp LCTRL         &mt LEFT_WIN TAB  &kp LEFT_ALT  &mt LEFT_ALT LANG1  &trans   &lt 2 LANG2      &kp BACKSPACE  &lt 1 ENTER                                  &mt ESCAPE JP_TILDE
             >;
         };

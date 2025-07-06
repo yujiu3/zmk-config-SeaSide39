@@ -1,4 +1,4 @@
-p#include "SeaSide39.dtsi"
+#include "SeaSide39.dtsi"
 
 &default_transform {
     col-offset = <6>;

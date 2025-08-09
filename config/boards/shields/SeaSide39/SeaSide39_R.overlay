@@ -1,4 +1,5 @@
 #include "SeaSide39.dtsi"
+#include <input/processors.dtsi>
 
 &default_transform {
     col-offset = <6>;
@@ -15,12 +16,36 @@
             ;
 };
 
+/* AML解除対象外のキー */ 
+
+&zip_temp_layer {
+    excluded-positions = <
+        16 // 左クリック
+        18 // 右クリック
+/*
+        17 // 上
+        26 // 左
+        27 // 下
+        28 // 右
+*/
+    >;
+};
+
+
+/* キー入力後AML発動を抑制する時間 */ 
+&zip_temp_layer {
+    require-prior-idle-ms = <200>;
+};
+
+
 /* Trackball のリスナー */ 
 / {
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
+/* input-processors設定 */ 
+        input-processors = <&zip_temp_layer 4 650>;
     };
 };
 
@@ -66,4 +91,3 @@
         scroll-layers = <5>;
     };
 };
-

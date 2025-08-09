@@ -33,17 +33,41 @@
 #define JP_HANZEN       GRAVE             // 半角/全角
 
 &mt {
-    flavor = "balanced";
+    flavor = "tap-preferred";
+    require-prior-idle-ms = <200>;
     quick-tap-ms = <300>;
 };
 
 &lt {
     flavor = "balanced";
+    require-prior-idle-ms = <200>;
     quick-tap-ms = <300>;
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+				compatible = "zmk,combos";
+				combo_esc {
+            timeout-ms = <50>;
+            key-positions = <33 34>;
+            bindings = <&kp ESC>;
+        };
+				combo_tab {
+            timeout-ms = <50>;
+            key-positions = <34 35>;
+            bindings = <&kp TAB>;
+        };
+				combo_lc_pgup {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&kp LC(PAGE_UP)>;
+        };
+				combo_lc_pgdn {
+            timeout-ms = <50>;
+            key-positions = <17 18>;
+            bindings = <&kp LC(PAGE_DOWN)>;
+        };
+    };
 
     macros {
         to_layer_0: to_layer_0 {
@@ -128,8 +152,8 @@
 
         CONFIG {
             bindings = <
-&bt BT_CLR_ALL  &bt BT_CLR    &trans        &bootloader   &trans                            &trans  &trans  &trans  &bootloader  &trans
-&trans          &trans        &trans        &trans        &trans                            &trans  &trans  &trans  &trans       &trans
+&bt BT_CLR_ALL  &bt BT_CLR    &trans        &trans        &trans                            &trans  &trans  &trans  &trans       &trans
+&trans          &trans        &trans        &trans        &bootloader                       &trans  &trans  &trans  &trans       &bootloader
 &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                      &trans  &trans  &trans  &trans       &trans
 &trans          &trans        &trans        &trans        &trans        &trans      &trans  &trans                               &trans
             >;
